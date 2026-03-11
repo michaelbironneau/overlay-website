@@ -54,7 +54,7 @@ export default function MonetiseRemoteAccessPage() {
           "Kiosk links for on-site displays and TVs",
         ]}
         ctaText="Book a demo →"
-        ctaHref="#"
+        ctaHref="/book-a-demo"
         imageSrc="/images/single-pane-of-glass.png"
         imageAlt="Overlay unified access dashboard"
         reverse
@@ -93,7 +93,7 @@ export default function MonetiseRemoteAccessPage() {
           </>
         }
         primaryCtaLabel="Book a Demo"
-        primaryCtaHref="#"
+        primaryCtaHref="/book-a-demo"
         secondaryCtaLabel="▶ Watch 2-min Overview"
         secondaryCtaHref="/how-it-works"
         footnote="Launch in days, not months."

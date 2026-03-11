@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export function TestimonialSection() {
     return (
@@ -27,12 +28,12 @@ export function TestimonialSection() {
                 </motion.p>
 
                 <div className="flex flex-wrap justify-center gap-4 mt-12">
-                    <a href="#" className="bg-white text-[#7C3AED] px-8 py-4 rounded-md font-bold text-base hover:scale-[1.04] transition-transform">
+                    <Link href="/book-a-demo" className="bg-white text-[#7C3AED] px-8 py-4 rounded-md font-bold text-base hover:scale-[1.04] transition-transform">
                         Book a Demo
-                    </a>
-                    <a href="#" className="border-2 border-white/20 text-white px-8 py-4 rounded-md font-semibold text-base hover:bg-white/10 transition-colors">
+                    </Link>
+                    <Link href="/how-it-works" className="border-2 border-white/20 text-white px-8 py-4 rounded-md font-semibold text-base hover:bg-white/10 transition-colors">
                         ▶ Watch 2-min Overview
-                    </a>
+                    </Link>
                 </div>
             </div>
         </section>

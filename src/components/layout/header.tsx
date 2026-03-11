@@ -108,7 +108,11 @@ export function Header() {
             >
               Sign in
             </Button>
-            <Button className="h-10 px-5.5 font-semibold text-white shadow-[0_4px_12px_rgba(124,58,237,0.2)] transition-all hover:shadow-[0_6px_16px_rgba(124,58,237,0.3)] bg-linear-to-br from-[#7C3AED] to-[#6D28D9]">
+            <Button
+              render={<Link href="/book-a-demo" />}
+              nativeButton={false}
+              className="h-10 px-5.5 font-semibold text-white shadow-[0_4px_12px_rgba(124,58,237,0.2)] transition-all hover:shadow-[0_6px_16px_rgba(124,58,237,0.3)] bg-linear-to-br from-[#7C3AED] to-[#6D28D9]"
+            >
               Book a Demo
             </Button>
           </div>

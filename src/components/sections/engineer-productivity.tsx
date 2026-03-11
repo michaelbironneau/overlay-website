@@ -45,7 +45,7 @@ export function EngineerProductivity() {
                         "Auditable contractor access without compromising security"
                     ]}
                     ctaText="See engineer workflow →"
-                    ctaHref="#"
+                    ctaHref="/how-it-works"
                     imageSrc="/images/engineer-productivity.png"
                     imageAlt="Engineer productivity view"
                     dark
@@ -53,7 +53,7 @@ export function EngineerProductivity() {
                 />
 
                 <div className="text-center mt-14 pb-24 relative z-10">
-                    <a href="#" className="inline-block bg-white text-[#7C3AED] px-8 py-4 rounded-md font-bold text-base hover:scale-[1.04] transition-transform">
+                    <a href="/book-a-demo" className="inline-block bg-white text-[#7C3AED] px-8 py-4 rounded-md font-bold text-base hover:scale-[1.04] transition-transform">
                         Reclaim Your Team&apos;s Time →
                     </a>
                 </div>

@@ -101,6 +101,7 @@ export function HowItWorksHero() {
 
           <HeroCTAGroup
             primaryLabel="Book a Demo"
+            primaryHref="/book-a-demo"
             secondaryLabel="See the access model"
             secondaryHref="/how-it-works#comparison"
             className="mt-8"

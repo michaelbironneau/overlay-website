@@ -19,10 +19,8 @@ export function Footer() {
                         <div className="space-y-4">
                             <h5 className="font-display text-sm font-bold text-white">Product</h5>
                             <ul className="flex flex-col gap-2.5">
-                                <li><Link href="#" className="text-sm hover:text-white transition-colors">Platform</Link></li>
-                                <li><Link href="#" className="text-sm hover:text-white transition-colors">Security</Link></li>
-                                <li><Link href="#" className="text-sm hover:text-white transition-colors">Integrations</Link></li>
-                                <li><Link href="#" className="text-sm hover:text-white transition-colors">Changelog</Link></li>
+                                <li><Link href="/how-it-works" className="text-sm hover:text-white transition-colors">Platform</Link></li>
+                                <li><Link href="/how-it-works" className="text-sm hover:text-white transition-colors">Security</Link></li>
                             </ul>
                         </div>
 
@@ -30,9 +28,8 @@ export function Footer() {
                             <h5 className="font-display text-sm font-bold text-white">Solutions</h5>
                             <ul className="flex flex-col gap-2.5">
                                 <li><Link href="#" className="text-sm hover:text-white transition-colors">Bureaus</Link></li>
-                                <li><Link href="#" className="text-sm hover:text-white transition-colors">Facility Teams</Link></li>
-                                <li><Link href="#" className="text-sm hover:text-white transition-colors">BMS Projects</Link></li>
-                                <li><Link href="#" className="text-sm hover:text-white transition-colors">Partners</Link></li>
+                                <li><Link href="/how-it-works" className="text-sm hover:text-white transition-colors">BMS Projects</Link></li>
+                                <li><Link href="/monetise-remote-access" className="text-sm hover:text-white transition-colors">Partners</Link></li>
                             </ul>
                         </div>
 

@@ -19,13 +19,15 @@ const plans: PricingPlan[] = [
         name: "Project Plan",
         price: "£12",
         period: "/mo per site",
-        desc: "Pay-as-you-go for individual projects and small bureaus.",
+        desc: "Pay-as-you-go for resellers and small bureaus. Scale discounts available.",
         features: [
-            "Up to 10 sites",
-            "5 team members",
+            "Pay per site, cancel at any time",
+            "Up to 5 users per site",
+            "HTTP(S) + Fox(S) included",
             "Full audit logging",
-            "Standard support",
-            "Upgrade anytime, no re-architecting"
+            "First customer portal free",
+            "Monetisation support (auto-billing and renewals)",
+            "Upgrade  to enterprise anytime"
         ],
         cta: "Get Started",
         variant: "outline"
@@ -34,13 +36,14 @@ const plans: PricingPlan[] = [
         name: "Enterprise Plan",
         price: "Custom",
         period: " pricing",
-        desc: "Dedicated environment with predictable costs and enterprise-grade features.",
+        desc: "Dedicated environment with predictable costs for growing teams. Everything in Project, plus:",
         features: [
             "Unlimited sites",
             "Unlimited team members",
-            "Customer portal included",
+            "Unlimited customer portals",
+            "Add cloud-hosted VMs",
+            "Dedicated support portal",
             "SSO / SAML integration",
-            "Dedicated success manager",
             "SLA guarantee"
         ],
         cta: "Book a Demo",
@@ -104,7 +107,7 @@ export function PricingSection() {
                 </div>
 
                 <p className="text-center mt-7 text-[15px] text-[#6B7280]">
-                    Questions? <a href="#" className="text-[#7C3AED] font-semibold hover:underline">Book a 15-minute call</a> and we&apos;ll find the right fit.
+                    Questions? <a href="/book-a-demo" className="text-[#7C3AED] font-semibold hover:underline">Book a 30-minute call</a> and we&apos;ll find the right fit.
                 </p>
             </div>
         </section>

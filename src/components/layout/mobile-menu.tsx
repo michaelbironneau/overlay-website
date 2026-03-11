@@ -139,7 +139,12 @@ export function MobileMenu() {
                                 >
                                     Sign in
                                 </Button>
-                                <Button className="bg-linear-to-br from-[#7C3AED] to-[#6D28D9] text-white shadow-lg h-14 font-bold text-lg">
+                                <Button
+                                    render={<Link href="/book-a-demo" />}
+                                    nativeButton={false}
+                                    className="bg-linear-to-br from-[#7C3AED] to-[#6D28D9] text-white shadow-lg h-14 font-bold text-lg"
+                                    onClick={() => setIsOpen(false)}
+                                >
                                     Book a Demo
                                 </Button>
                             </motion.div>

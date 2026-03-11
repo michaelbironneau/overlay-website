@@ -49,7 +49,9 @@ export function Hero() {
 
                 <HeroCTAGroup
                     primaryLabel="Book a Demo"
+                    primaryHref="/book-a-demo"
                     secondaryLabel="▶ How it Works"
+                    secondaryHref="/how-it-works"
                     className="mb-3.5 justify-center"
                 />
 

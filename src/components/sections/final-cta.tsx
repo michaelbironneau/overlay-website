@@ -19,10 +19,10 @@ export function FinalCTA({
     title = <>Your team deserves better<br className="hidden md:block" /> than VPN juggling.</>,
     description = <>Join the bureaus who&apos;ve reclaimed 10+ hours per week.<br className="hidden md:block" /> Setup takes hours, not weeks. No hardware. No network changes.</>,
     primaryCtaLabel = "Book Your Demo",
-    primaryCtaHref = "#",
+    primaryCtaHref = "/book-a-demo",
     secondaryCtaLabel,
     secondaryCtaHref = "#",
-    footnote = "Free 14-day trial · No credit card required",
+    footnote = "30 minutes call, no commitment required.",
     variant = "default",
 }: FinalCTAProps) {
     const isTestimonial = variant === "testimonial";

@@ -38,9 +38,9 @@ export default function HowItWorksPage() {
         title={<>See whether Overlay fits your security,<br className="hidden md:block" /> operations, and rollout requirements.</>}
         description="The key question is simple: can remote access become easier to govern without making the field workflow harder to operate? Overlay is designed to do exactly that."
         primaryCtaLabel="Book a Demo"
-        primaryCtaHref="#"
+        primaryCtaHref="/book-a-demo"
         secondaryCtaLabel="See rollout steps"
-        secondaryCtaHref="#rollout"
+        secondaryCtaHref="/how-it-works#rollout"
         footnote="BMS-centric access model. Loved by IT teams."
         variant="testimonial"
       />
