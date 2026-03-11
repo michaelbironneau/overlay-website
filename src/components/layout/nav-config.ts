@@ -17,8 +17,8 @@ export const productNavItems: NavChildItem[] = [
     description: "Connect to any site with a single login.",
   },
   {
-    href: "/monetize-remote-access",
-    label: "Monetize Remote Access",
+    href: "/monetise-remote-access",
+    label: "Monetise Remote Access",
     description: "Turn remote connectivity into a managed recurring service.",
   },
 ];
@@ -35,9 +35,5 @@ export const primaryNavItems: NavItem[] = [
   {
     href: "/#pricing",
     label: "Pricing",
-  },
-  {
-    href: "/#solutions",
-    label: "Solutions",
   },
 ];

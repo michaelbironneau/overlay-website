@@ -6,25 +6,25 @@ import { FeatureRow } from "@/components/sections/feature-row";
 import { FinalCTA } from "@/components/sections/final-cta";
 import {
   ManagedPlatformSection,
-  MonetizeRemoteAccessHero,
+  MonetiseRemoteAccessHero,
   RemoteAccessProblemSection,
   RemoteServiceGrowthSection,
-} from "@/components/sections/monetize-remote-access";
+} from "@/components/sections/monetise-remote-access";
 import { OnboardingSteps } from "@/components/sections/onboarding";
 import { SecuritySection } from "@/components/sections/security";
 
 export const metadata: Metadata = {
-  title: "Monetize Remote Access | Overlay",
+  title: "Monetise Remote Access | Overlay",
   description:
     "Turn building remote access into a secure recurring service with Overlay handling the infrastructure, billing, and renewals.",
 };
 
-export default function MonetizeRemoteAccessPage() {
+export default function MonetiseRemoteAccessPage() {
   return (
     <main className="min-h-screen">
       <Announcement />
       <Header />
-      <MonetizeRemoteAccessHero />
+      <MonetiseRemoteAccessHero />
       <RemoteAccessProblemSection />
 
       <FeatureRow

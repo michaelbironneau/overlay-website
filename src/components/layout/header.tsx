@@ -100,7 +100,12 @@ export function Header() {
 
         <div className="flex items-center gap-2.5">
           <div className="hidden items-center gap-2.5 md:flex">
-            <Button variant="ghost" className="h-9 px-4 text-sm font-medium text-[#0F0520] opacity-80">
+            <Button
+              render={<a href="https://app.overlay.ws" target="_blank" rel="noreferrer" />}
+              nativeButton={false}
+              variant="ghost"
+              className="h-9 px-4 text-sm font-medium text-[#0F0520] opacity-80"
+            >
               Sign in
             </Button>
             <Button className="h-10 px-5.5 font-semibold text-white shadow-[0_4px_12px_rgba(124,58,237,0.2)] transition-all hover:shadow-[0_6px_16px_rgba(124,58,237,0.3)] bg-linear-to-br from-[#7C3AED] to-[#6D28D9]">

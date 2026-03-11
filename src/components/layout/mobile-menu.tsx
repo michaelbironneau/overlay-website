@@ -131,7 +131,12 @@ export function MobileMenu() {
                             ))}
 
                             <motion.div variants={linkVariants} className="w-full pt-8 flex flex-col gap-4">
-                                <Button variant="ghost" className="text-lg font-medium text-[#0F0520] h-12">
+                                <Button
+                                    render={<a href="https://app.overlay.ws" target="_blank" rel="noreferrer" />}
+                                    nativeButton={false}
+                                    variant="ghost"
+                                    className="text-lg font-medium text-[#0F0520] h-12"
+                                >
                                     Sign in
                                 </Button>
                                 <Button className="bg-linear-to-br from-[#7C3AED] to-[#6D28D9] text-white shadow-lg h-14 font-bold text-lg">

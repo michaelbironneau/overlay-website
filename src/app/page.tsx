@@ -49,8 +49,8 @@ export default function Home() {
           "High-margin recurring revenue from digital services",
           "Ready-made sales collateral to close faster"
         ]}
-        ctaText="See how bureaus monetize access →"
-        ctaHref="/monetize-remote-access"
+        ctaText="See how bureaus monetise access →"
+        ctaHref="/monetise-remote-access"
         imageSrc="/images/revenue.png"
         imageAlt="Customer portal"
         reverse

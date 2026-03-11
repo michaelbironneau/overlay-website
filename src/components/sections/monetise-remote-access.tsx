@@ -55,7 +55,7 @@ const growthItems = [
   "Secure integration with customer IT environments",
 ];
 
-export function MonetizeRemoteAccessHero() {
+export function MonetiseRemoteAccessHero() {
   return (
     <section className="relative overflow-hidden bg-[#FAF5FF] px-6 pb-20 pt-24 md:pt-28">
       <HeroAnimation />
@@ -67,7 +67,7 @@ export function MonetizeRemoteAccessHero() {
             Remote Access as a Service
           </p>
           <h1 className="font-display text-[40px] font-extrabold leading-[1.04] tracking-[-1.4px] text-[#111827] md:text-[68px]">
-            Monetize Remote Access
+            Monetise Remote Access
           </h1>
           <p className="mt-6 max-w-[640px] text-lg leading-relaxed text-[#4B5563] md:text-[20px]">
             Secure remote access for BMS operators, without the admin. Overlay lets you provide
@@ -238,7 +238,7 @@ export function RemoteAccessProblemSection() {
           </h2>
           <p className="mt-5 text-lg leading-relaxed text-[#6B7280]">
             Most BMS operators already provide remote access in some form. The issue is that it is
-            usually unmanaged, insecure, and difficult to monetize.
+            usually unmanaged, insecure, and difficult to monetise.
           </p>
         </div>
 
