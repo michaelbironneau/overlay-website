@@ -12,6 +12,11 @@ export type NavItem = {
 
 export const productNavItems: NavChildItem[] = [
   {
+    href: "/",
+    label: "Remote access for BMS",
+    description: "Connect to any site with a single login.",
+  },
+  {
     href: "/monetize-remote-access",
     label: "Monetize Remote Access",
     description: "Turn remote connectivity into a managed recurring service.",

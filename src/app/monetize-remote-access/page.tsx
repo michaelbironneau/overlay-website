@@ -50,8 +50,8 @@ export default function MonetizeRemoteAccessPage() {
         features={[
           "Secure remote engineer access",
           "Third-party contractor access",
-          "Head-end monitoring systems",
-          "Remote diagnostics and support",
+          "Whitelabel customer portals",
+          "Kiosk links for on-site displays and TVs",
         ]}
         ctaText="Book a demo →"
         ctaHref="#"
@@ -68,7 +68,7 @@ export default function MonetizeRemoteAccessPage() {
         features={[
           "Supports Niagara, Trend IQ, Schneider EcoStruxure, Siemens Desigo, and legacy head-ends",
           "Works across embedded controllers and full head-end environments",
-          "No workflow changes required for engineering teams",
+          "No workflow changes required for engineering teams. Overlay adapts to you"
         ]}
         ctaText="Explore compatibility →"
         ctaHref="/#solutions"

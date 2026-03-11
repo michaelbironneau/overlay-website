@@ -1,38 +1,43 @@
+"use client";
+
 import Image from "next/image";
+import { useEffect, useState } from "react";
+import { motion, animate } from "framer-motion";
 import { Check, PoundSterling, Server, ShieldCheck } from "lucide-react";
+import { HeroAnimation } from "@/components/animations/hero-animation";
 import { Button } from "@/components/ui/button";
 import { ComparisonGrid, type ComparisonRow } from "@/components/sections/comparison-grid";
 import { HeroCTAGroup } from "@/components/sections/hero-cta-group";
 
 const problemComparisonRows: ComparisonRow[] = [
   {
-    before: { title: "Shared VPNs across multiple customers" },
-    after: { title: "Remote troubleshooting" },
+    before: { title: "Remote connections are a cost center" },
+    after: { title: "Remote connections are a revenue stream" },
   },
   {
-    before: { title: "Static firewall rules that never get reviewed" },
-    after: { title: "Alarm response" },
+    before: { title: "Your sales slow down every time there's a cyber risk questionnaire" },
+    after: { title: "Overlay provides pre-filled risk assessments" },
   },
   {
     before: { title: "Credentials emailed around engineering teams" },
-    after: { title: "Energy optimisation" },
+    after: { title: "Staff just use one Overlay identity" },
   },
   {
-    before: { title: "No clear billing model" },
-    after: { title: "System upgrades" },
+    before: { title: "Manual customer billing (or none at all)" },
+    after: { title: "Automated customer billing and renewals" },
   },
   {
-    before: { title: "Remote access provided for free" },
-    after: { title: "Out-of-hours support" },
+    before: { title: "Teams juggle different VPNs for every client" },
+    after: { title: "All customer connections in one place" },
   },
 ];
 
 const managedPlatformItems = [
-  "Secure network infrastructure",
+  "Bring your own network infrastructure or use ours",
   "Encrypted tunnels",
   "Authentication and access control",
   "Session routing",
-  "Monitoring and uptime",
+  "Military-grade audit and access logging",
 ];
 
 const turnkeyPartnerItems = [
@@ -53,7 +58,9 @@ const growthItems = [
 export function MonetizeRemoteAccessHero() {
   return (
     <section className="relative overflow-hidden bg-[#FAF5FF] px-6 pb-20 pt-24 md:pt-28">
+      <HeroAnimation />
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(124,58,237,0.16)_0%,_rgba(250,245,255,0)_45%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(250,245,255,0.92)_0%,_rgba(250,245,255,0)_75%)] z-[1]" />
       <div className="relative z-10 mx-auto grid max-w-[1160px] gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
         <div>
           <p className="mb-4 font-mono text-xs font-medium uppercase tracking-[0.14em] text-[#7C3AED]">
@@ -82,60 +89,140 @@ export function MonetizeRemoteAccessHero() {
           />
         </div>
 
-        <div className="rounded-[28px] border border-[#E9D5FF] bg-white p-6 shadow-[0_24px_80px_rgba(124,58,237,0.12)]">
-          <div className="flex items-center gap-3">
-            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#F3F1FF]">
-              <PoundSterling className="h-6 w-6 text-[#7C3AED]" />
-            </div>
-            <div>
-              <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-[#7C3AED]">
-                Revenue Calculator
-              </p>
-              <h2 className="mt-1 font-display text-2xl font-bold text-[#0F0520]">
-                See what your sites could earn
-              </h2>
-            </div>
-          </div>
-
-          <div className="mt-8 grid gap-4">
-            <CalculatorField label="Number of sites" defaultValue="25" />
-            <CalculatorField label="Number of customers" defaultValue="8" />
-            <CalculatorField label="Number of users" defaultValue="60" />
-          </div>
-
-          <Button className="mt-6 h-12 w-full font-semibold text-white bg-linear-to-br from-[#7C3AED] to-[#6D28D9]">
-            Estimate
-          </Button>
-
-          <div className="mt-6 rounded-2xl bg-[#0F0520] px-5 py-6 text-white">
-            <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-white/60">
-              Placeholder Estimate
-            </p>
-            <div className="mt-2 flex items-end gap-2">
-              <span className="font-display text-5xl font-extrabold tracking-tight">£2,750</span>
-              <span className="pb-1 text-white/70">/ month</span>
-            </div>
-            <p className="mt-2 text-sm leading-relaxed text-white/70">
-              Non-binding illustration only. Final pricing and packaging are configured with you.
-            </p>
-          </div>
-        </div>
+        <RevenueCalculatorCard />
       </div>
     </section>
   );
 }
 
-function CalculatorField({ label, defaultValue }: { label: string; defaultValue: string }) {
+function RevenueCalculatorCard() {
+  const [siteCount, setSiteCount] = useState(25);
+  const [estimatedMonthlyRevenue, setEstimatedMonthlyRevenue] = useState<number | null>(null);
+  const [animatedEstimate, setAnimatedEstimate] = useState(0);
+
+  const siteLabel = siteCount === 1000 ? "1000+" : siteCount.toString();
+
+  useEffect(() => {
+    if (estimatedMonthlyRevenue === null) {
+      return;
+    }
+
+    setAnimatedEstimate(0);
+
+    const controls = animate(0, estimatedMonthlyRevenue, {
+      duration: 0.8,
+      ease: "easeOut",
+      onUpdate(value) {
+        setAnimatedEstimate(Math.round(value));
+      },
+    });
+
+    return () => controls.stop();
+  }, [estimatedMonthlyRevenue]);
+
   return (
-    <label className="block">
-      <span className="mb-2 block text-sm font-medium text-[#0F0520]">{label}</span>
-      <input
-        type="text"
-        defaultValue={defaultValue}
-        className="h-12 w-full rounded-xl border border-[#E9D5FF] bg-[#FCFBFF] px-4 text-[#0F0520] outline-none transition focus:border-[#7C3AED] focus:ring-4 focus:ring-[#7C3AED]/10"
-      />
-    </label>
+    <div className="rounded-[28px] border border-[#E9D5FF] bg-white p-6 shadow-[0_24px_80px_rgba(124,58,237,0.12)]">
+      <div className="flex items-center gap-3">
+        <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#F3F1FF]">
+          <PoundSterling className="h-6 w-6 text-[#7C3AED]" />
+        </div>
+        <div>
+          <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-[#7C3AED]">
+            Revenue Calculator
+          </p>
+          <h2 className="mt-1 font-display text-2xl font-bold text-[#0F0520]">
+            See what your sites could earn
+          </h2>
+        </div>
+      </div>
+
+      <div className="mt-8">
+        <div className="flex items-end justify-between gap-4">
+          <div>
+            <p className="text-sm font-medium text-[#0F0520]">Number of sites</p>
+          </div>
+          <div className="rounded-2xl bg-[#F3F1FF] px-4 py-2 text-right">
+            <p className="font-display text-2xl font-bold tracking-tight text-[#0F0520]">
+              {siteLabel}
+            </p>
+          </div>
+        </div>
+
+        <input
+          type="range"
+          min={1}
+          max={1000}
+          step={1}
+          value={siteCount}
+          onChange={(event) => setSiteCount(Number(event.target.value))}
+          className="mt-6 h-2 w-full cursor-pointer appearance-none rounded-full bg-[#E9D5FF] accent-[#7C3AED]"
+          aria-label="Number of sites"
+        />
+
+        <div className="mt-2 flex justify-between font-mono text-[11px] uppercase tracking-[0.14em] text-[#6B7280]">
+          <span>1</span>
+          <span>1000+</span>
+        </div>
+      </div>
+
+      <Button
+        className="mt-6 h-12 w-full font-semibold text-white bg-linear-to-br from-[#7C3AED] to-[#6D28D9]"
+        onClick={() => setEstimatedMonthlyRevenue(calculateEstimate(siteCount))}
+      >
+        Estimate
+      </Button>
+
+      {estimatedMonthlyRevenue !== null ? (
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.35, ease: "easeOut" }}
+          className="mt-6 rounded-2xl bg-[#0F0520] px-5 py-6 text-white"
+        >
+          <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-white/60">
+            Estimated Monthly Revenue
+          </p>
+          <div className="mt-2 flex items-end gap-2">
+            <span className="font-display text-5xl font-extrabold tracking-tight">
+              £{animatedEstimate.toLocaleString("en-GB")}
+            </span>
+            <span className="pb-1 text-white/70">/ month</span>
+          </div>
+          <p className="mt-2 text-sm leading-relaxed text-white/70">
+            Tiered estimate based on your site count. Final packaging and pricing can be refined with
+            your team.
+          </p>
+        </motion.div>
+      ) : null}
+    </div>
   );
+}
+
+function calculateEstimate(siteCount: number) {
+  const tiers = [
+    { limit: 25, rate: 9 },
+    { limit: 75, rate: 10 },
+    { limit: 100, rate: 11 },
+  ];
+
+  let remainingSites = siteCount;
+  let total = 0;
+
+  for (const tier of tiers) {
+    if (remainingSites <= 0) {
+      return total;
+    }
+
+    const sitesInTier = Math.min(remainingSites, tier.limit);
+    total += sitesInTier * tier.rate;
+    remainingSites -= sitesInTier;
+  }
+
+  if (remainingSites > 0) {
+    total += remainingSites * 12;
+  }
+
+  return total;
 }
 
 export function RemoteAccessProblemSection() {
@@ -158,8 +245,8 @@ export function RemoteAccessProblemSection() {
         <div className="mt-12">
           <ComparisonGrid
             rows={problemComparisonRows}
-            beforeLabel="Typical Reality"
-            afterLabel="Why it matters"
+            beforeLabel="Before Overlay"
+            afterLabel="After overlay"
             className="mx-auto max-w-[960px]"
           />
           <p className="mx-auto mt-8 max-w-[700px] text-center text-base leading-relaxed text-[#6B7280]">

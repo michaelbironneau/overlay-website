@@ -3,9 +3,9 @@
 import { motion } from "framer-motion";
 
 const steps = [
-    { num: 1, title: "Book a Demo", desc: "15-minute call. We map your estate and answer your questions." },
-    { num: 2, title: "Connect Your Sites", desc: "Guided setup wizard. Works with your existing VPN or mesh." },
-    { num: 3, title: "Empower Your Team", desc: "Invite engineers. Set permissions. Start remediating remotely." },
+    { num: 1, title: "Book a Demo", desc: "30-minute call. We'll suggest the quickest solution for your estate and answer your questions." },
+    { num: 2, title: "Connect Your Networks", desc: "Guided setup. Works with your existing VPN or mesh - or we provide a managed VPN service if you don't already use one." },
+    { num: 3, title: "Onboard your team", desc: "Invite engineers, staff and contractors. Create your sites. Set permissions. Start remediating remotely." },
     { num: 4, title: "Unlock New Revenue", desc: "Launch your customer portal. Turn access into recurring revenue." }
 ];
 
