@@ -71,7 +71,7 @@ export default function MonetiseRemoteAccessPage() {
           "No workflow changes required for engineering teams. Overlay adapts to you"
         ]}
         ctaText="Explore compatibility →"
-        ctaHref="/#solutions"
+        ctaHref="/how-it-works"
         imageSrc="/images/compatibility.png"
         imageAlt="Overlay compatibility diagram"
         className="bg-[#F3F1FF]"

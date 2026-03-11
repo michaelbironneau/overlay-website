@@ -216,7 +216,7 @@ export function DeploymentFitSection() {
   return (
     <FeatureRow
       eyebrow="Deployment Fit"
-      title={<>Designed for real BMS estates,<br />not greenfield assumptions.</>}
+      title={<>Designed for real BMS estates,<br />by former BMS industry pros.</>}
       description="Overlay is intended for portfolios where site connectivity, devices, and operational practices vary from customer to customer. The user workflow remains consistent even when the underlying estate does not."
       features={[
         "Supports mixed estates with existing remote-access patterns already in place",
@@ -237,10 +237,10 @@ export function ManagedConnectivitySection() {
   return (
     <FeatureRow
       eyebrow="Managed Connectivity"
-      title={<>Overlay can provide the connectivity layer<br />when the site does not already have one.</>}
+      title={<>Overlay can provide the connectivity layer when the site does not already have one.</>}
       description="Some customer estates already have a suitable path for secure access. Others do not. Overlay can extend the same session-based access model to those sites by providing the underlying connectivity layer as well."
       features={[
-        "Presented as an extension of the same access model, not a separate product story",
+        "Managed Wireguard VPN is easy to install on routers and site PCs",
         "Keep one operating model across sites with and without existing connectivity",
         "Avoids turning special-case sites into a different governance process",
       ]}
@@ -342,7 +342,7 @@ export function RolloutSection() {
       id="rollout"
       eyebrow="Rollout"
       title={<>Adopt the model in four practical steps.</>}
-      description="The rollout story should feel familiar to BMS teams: confirm the estate fit, connect the sites, onboard the right users, and move into governed day-to-day access."
+      description="Overlay uses a familiar rollout process: confirm the estate fit, connect the sites, onboard the right users, and move into governed day-to-day access."
       steps={[
         {
           num: 1,

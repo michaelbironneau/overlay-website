@@ -36,10 +36,8 @@ export function Footer() {
                         <div className="space-y-4 col-span-2 md:col-span-1">
                             <h5 className="font-display text-sm font-bold text-white">Company</h5>
                             <ul className="flex flex-col gap-2.5">
-                                <li><Link href="#" className="text-sm hover:text-white transition-colors">About</Link></li>
-                                <li><Link href="#" className="text-sm hover:text-white transition-colors">Contact</Link></li>
-                                <li><Link href="#" className="text-sm hover:text-white transition-colors">Privacy</Link></li>
-                                <li><Link href="#" className="text-sm hover:text-white transition-colors">Terms</Link></li>
+                                <li><Link href="/privacy" className="text-sm hover:text-white transition-colors">Privacy</Link></li>
+                                <li><Link href="/terms" className="text-sm hover:text-white transition-colors">Terms</Link></li>
                             </ul>
                         </div>
                     </div>
