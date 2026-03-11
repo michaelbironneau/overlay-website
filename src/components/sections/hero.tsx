@@ -3,7 +3,6 @@
 import { motion, type Transition } from "framer-motion";
 import { HeroAnimation } from "@/components/animations/hero-animation";
 import { HeroCTAGroup } from "@/components/sections/hero-cta-group";
-import Image from "next/image";
 
 const fadeInUp = {
     initial: { opacity: 0, y: 20 },
@@ -51,7 +50,7 @@ export function Hero() {
                     primaryLabel="Book a Demo"
                     primaryHref="/book-a-demo"
                     secondaryLabel="▶ How it Works"
-                    secondaryHref="/how-it-works"
+                    secondaryHref="/#demo-video"
                     className="mb-3.5 justify-center"
                 />
 
@@ -75,19 +74,19 @@ export function Hero() {
                     {...fadeInUp}
                     transition={{ delay: 0.6, ...transition }}
                     className="mt-10 w-full max-w-[640px] relative shadow-2xl"
+                    id="demo-video"
                 >
                     <div className="bg-[#0F0520] rounded-t-lg h-7 flex items-center px-3.5 gap-1.5 border-b border-white/10">
                         <span className="w-2.5 h-2.5 rounded-full bg-[#EF4444]" />
                         <span className="w-2.5 h-2.5 rounded-full bg-[#F59E0B]" />
                         <span className="w-2.5 h-2.5 rounded-full bg-[#10B981]" />
                     </div>
-                    <div className="relative aspect-[16/10] bg-[#0F0520] rounded-b-lg overflow-hidden">
-                        <Image
-                            src="/images/hero.gif"
-                            alt="Overlay dashboard"
-                            fill
-                            className="object-cover"
-                            unoptimized // GIF usually works better sibling this way in Next.js
+                    <div className="relative aspect-video bg-[#0F0520] rounded-b-lg overflow-hidden">
+                        <iframe
+                            src="https://share.descript.com/embed/xZDVrT7GTzc"
+                            title="Overlay 3-minute how-to video"
+                            className="absolute inset-0 h-full w-full border-0"
+                            allowFullScreen
                         />
                     </div>
                 </motion.div>

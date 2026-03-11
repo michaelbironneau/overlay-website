@@ -85,7 +85,7 @@ export function MonetiseRemoteAccessHero() {
             primaryLabel="Book a Demo"
             primaryHref="/book-a-demo"
             secondaryLabel="▶ How it Works"
-            secondaryHref="/how-it-works"
+            secondaryHref="/#demo-video"
             className="mt-8"
           />
         </div>

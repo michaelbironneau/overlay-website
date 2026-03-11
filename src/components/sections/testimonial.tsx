@@ -31,8 +31,8 @@ export function TestimonialSection() {
                     <Link href="/book-a-demo" className="bg-white text-[#7C3AED] px-8 py-4 rounded-md font-bold text-base hover:scale-[1.04] transition-transform">
                         Book a Demo
                     </Link>
-                    <Link href="/how-it-works" className="border-2 border-white/20 text-white px-8 py-4 rounded-md font-semibold text-base hover:bg-white/10 transition-colors">
-                        ▶ Watch 2-min Overview
+                    <Link href="/#demo-video" className="border-2 border-white/20 text-white px-8 py-4 rounded-md font-semibold text-base hover:bg-white/10 transition-colors">
+                        ▶ Watch 3-min Overview
                     </Link>
                 </div>
             </div>

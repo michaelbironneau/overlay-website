@@ -95,7 +95,7 @@ export default function MonetiseRemoteAccessPage() {
         primaryCtaLabel="Book a Demo"
         primaryCtaHref="/book-a-demo"
         secondaryCtaLabel="▶ Watch 2-min Overview"
-        secondaryCtaHref="/how-it-works"
+        secondaryCtaHref="/#demo-video"
         footnote="Launch in days, not months."
         variant="testimonial"
       />
