@@ -21,7 +21,7 @@ export function Hero() {
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(250,245,255,0.95)_0%,_rgba(250,245,255,0)_75%)] pointer-events-none z-1" />
 
             <div className="relative z-10 w-full max-w-[1160px] flex flex-col items-center">
-                <img src={"/images/logo_2.png"} className="h-24" />
+                <img src={"/images/logo_3.png"} className="h-24" />
                 <motion.div
                     {...fadeInUp}
                     transition={transition}

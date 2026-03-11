@@ -6,7 +6,7 @@ export function Logo({ className, variant = "default" }: { className?: string; v
 
     return (
         <div className={cn("flex items-center gap-2.5", className)}>
-            <img src={"/images/logo_2.png"} className="h-6 shadow-lg" />
+            <img src={"/images/logo_3.png"} className="h-6 shadow-lg" />
             <span className={cn(
                 "font-display text-xl font-extrabold tracking-tight",
                 isLight ? "text-white" : "text-[#0F0520]"
