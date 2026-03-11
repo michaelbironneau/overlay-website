@@ -5,6 +5,7 @@ import { Header } from "@/components/layout/header";
 import { FinalCTA } from "@/components/sections/final-cta";
 import {
   DeploymentFitSection,
+  ExampleScenariosSection,
   HowItWorksHero,
   LegacyComparisonSection,
   ManagedConnectivitySection,
@@ -25,8 +26,9 @@ export default function HowItWorksPage() {
       <Announcement />
       <Header />
       <HowItWorksHero />
-      <LegacyComparisonSection />
       <WorkflowSection />
+      <ExampleScenariosSection />
+      <LegacyComparisonSection />
       <TrustAndAuditSection />
       <DeploymentFitSection />
       <ManagedConnectivitySection />
@@ -34,12 +36,12 @@ export default function HowItWorksPage() {
       <FinalCTA
         eyebrow="Review The Model"
         title={<>See whether Overlay fits your security,<br className="hidden md:block" /> operations, and rollout requirements.</>}
-        description="For BMS buyers, the key question is simple: can remote access become easier to govern without making the field workflow harder to operate? Overlay is designed to do exactly that."
+        description="The key question is simple: can remote access become easier to govern without making the field workflow harder to operate? Overlay is designed to do exactly that."
         primaryCtaLabel="Book a Demo"
         primaryCtaHref="#"
         secondaryCtaLabel="See rollout steps"
         secondaryCtaHref="#rollout"
-        footnote="Customer-facing access model. Buyer-safe messaging."
+        footnote="BMS-centric access model. Loved by IT teams."
         variant="testimonial"
       />
       <Footer />
