@@ -29,7 +29,7 @@ export const primaryNavItems: NavItem[] = [
     children: productNavItems,
   },
   {
-    href: "/#how-it-works",
+    href: "/how-it-works",
     label: "How it Works",
   },
   {

@@ -84,7 +84,7 @@ export function MonetiseRemoteAccessHero() {
           <HeroCTAGroup
             primaryLabel="Book a Demo"
             secondaryLabel="▶ How it Works"
-            secondaryHref="#how-it-works"
+            secondaryHref="/how-it-works"
             className="mt-8"
           />
         </div>

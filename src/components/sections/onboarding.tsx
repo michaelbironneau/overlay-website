@@ -2,23 +2,45 @@
 
 import { motion } from "framer-motion";
 
-const steps = [
+type Step = {
+    num: number;
+    title: string;
+    desc: string;
+};
+
+const steps: Step[] = [
     { num: 1, title: "Book a Demo", desc: "30-minute call. We'll suggest the quickest solution for your estate and answer your questions." },
     { num: 2, title: "Connect Your Networks", desc: "Guided setup. Works with your existing VPN or mesh - or we provide a managed VPN service if you don't already use one." },
     { num: 3, title: "Onboard your team", desc: "Invite engineers, staff and contractors. Create your sites. Set permissions. Start remediating remotely." },
     { num: 4, title: "Unlock New Revenue", desc: "Launch your customer portal. Turn access into recurring revenue." }
 ];
 
-export function OnboardingSteps({ id }: { id?: string }) {
+type StepSectionProps = {
+    id?: string;
+    eyebrow: string;
+    title: React.ReactNode;
+    description: string;
+    steps: Step[];
+    className?: string;
+};
+
+export function StepSection({
+    id,
+    eyebrow,
+    title,
+    description,
+    steps,
+    className = "bg-[#F3F1FF] py-24 px-6",
+}: StepSectionProps) {
     return (
-        <section id={id} className="bg-[#F3F1FF] py-24 px-6">
+        <section id={id} className={className}>
             <div className="max-w-[1160px] mx-auto text-center mb-16">
-                <p className="font-mono text-xs font-medium tracking-[0.14em] text-[#7C3AED] uppercase mb-4">Four-Step Rollout</p>
+                <p className="font-mono text-xs font-medium tracking-[0.14em] text-[#7C3AED] uppercase mb-4">{eyebrow}</p>
                 <h2 className="font-display text-[28px] md:text-[48px] font-bold text-[#0F0520] leading-[1.1] tracking-tight mb-4">
-                    Go live in four steps.
+                    {title}
                 </h2>
                 <p className="text-lg text-[#6B7280] max-w-[580px] mx-auto leading-relaxed">
-                    No hardware changes. No site visits. Onboarding typically takes hours, not weeks.
+                    {description}
                 </p>
             </div>
 
@@ -46,5 +68,17 @@ export function OnboardingSteps({ id }: { id?: string }) {
                 </div>
             </div>
         </section>
+    );
+}
+
+export function OnboardingSteps({ id }: { id?: string }) {
+    return (
+        <StepSection
+            id={id}
+            eyebrow="Four-Step Rollout"
+            title={<>Go live in four steps.</>}
+            description="No hardware changes. No site visits. Onboarding typically takes hours, not weeks."
+            steps={steps}
+        />
     );
 }

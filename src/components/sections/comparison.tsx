@@ -1,6 +1,8 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
 import { ComparisonGrid, type ComparisonRow } from "@/components/sections/comparison-grid";
 
 const comparisonData: ComparisonRow[] = [
@@ -22,40 +24,84 @@ const comparisonData: ComparisonRow[] = [
     }
 ];
 
-export function Comparison() {
+type ComparisonSectionProps = {
+    id?: string;
+    eyebrow: string;
+    title: React.ReactNode;
+    description: string;
+    rows: ComparisonRow[];
+    quote?: React.ReactNode;
+    ctaLabel?: string;
+    ctaHref?: string;
+};
+
+export function ComparisonSection({
+    id,
+    eyebrow,
+    title,
+    description,
+    rows,
+    quote,
+    ctaLabel,
+    ctaHref,
+}: ComparisonSectionProps) {
     return (
-        <section id="how-it-works" className="bg-[#FAF5FF] py-24 px-6 relative overflow-hidden">
+        <section id={id} className="bg-[#FAF5FF] py-24 px-6 relative overflow-hidden">
             <div className="absolute inset-0 opacity-[0.03] pointer-events-none"
                 style={{ backgroundImage: 'linear-gradient(#7C3AED 1px, transparent 1px), linear-gradient(90deg, #7C3AED 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
 
             <div className="max-w-[1160px] mx-auto relative z-10">
                 <div className="max-w-[1160px] mx-auto text-center mb-16 px-6">
-                    <p className="font-mono text-xs font-medium tracking-[0.14em] text-[#7C3AED] uppercase mb-4">Why BMS operators leave legacy tunnels</p>
+                    <p className="font-mono text-xs font-medium tracking-[0.14em] text-[#7C3AED] uppercase mb-4">{eyebrow}</p>
                     <h2 className="font-display text-[28px] md:text-[48px] font-bold text-[#0F0520] leading-[1.1] tracking-tight mb-4">
-                        Every pain point,<br className="hidden md:block" /> directly solved.
+                        {title}
                     </h2>
                     <p className="text-lg text-[#6B7280] max-w-[580px] mx-auto leading-relaxed">
-                        No more choosing between security and convenience. Overlay closes each gap, one by one.
+                        {description}
                     </p>
                 </div>
 
-                <ComparisonGrid rows={comparisonData} className="mx-auto max-w-[960px]" />
+                <ComparisonGrid rows={rows} className="mx-auto max-w-[960px]" />
 
-                <motion.p
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={{ once: true }}
-                    className="text-center mt-10 md:mt-12 font-display text-[18px] md:text-[24px] font-bold text-[#0F0520] max-w-[640px] mx-auto leading-tight px-6"
-                >
-                    &quot;Overlay blends convenience with enterprise-grade controls — without the enterprise-grade complexity.&quot;
-                </motion.p>
+                {quote ? (
+                    <motion.p
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        viewport={{ once: true }}
+                        className="text-center mt-10 md:mt-12 font-display text-[18px] md:text-[24px] font-bold text-[#0F0520] max-w-[640px] mx-auto leading-tight px-6"
+                    >
+                        {quote}
+                    </motion.p>
+                ) : null}
 
-                <div className="text-center mt-12">
-                    <a href="#" className="inline-block bg-[#7C3AED] text-white px-7 py-3.5 rounded-md font-semibold text-base shadow-lg hover:bg-[#6D28D9] transition-colors">
-                        See How Teams Make the Switch →
-                    </a>
-                </div>
+                {ctaLabel && ctaHref ? (
+                    <div className="text-center mt-12">
+                        <Button
+                            render={<Link href={ctaHref} />}
+                            nativeButton={false}
+                            size="lg"
+                            className="h-12 bg-[#7C3AED] px-7 font-semibold text-white shadow-lg hover:bg-[#6D28D9]"
+                        >
+                            {ctaLabel}
+                        </Button>
+                    </div>
+                ) : null}
             </div>
         </section>
+    );
+}
+
+export function Comparison() {
+    return (
+        <ComparisonSection
+            id="how-it-works"
+            eyebrow="Why BMS operators leave legacy tunnels"
+            title={<>Every pain point,<br className="hidden md:block" /> directly solved.</>}
+            description="No more choosing between security and convenience. Overlay closes each gap, one by one."
+            rows={comparisonData}
+            quote='"Overlay blends convenience with enterprise-grade controls — without the enterprise-grade complexity."'
+            ctaLabel="See How Teams Make the Switch →"
+            ctaHref="/how-it-works"
+        />
     );
 }

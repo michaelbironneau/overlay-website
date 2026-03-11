@@ -37,7 +37,7 @@ export default function MonetiseRemoteAccessPage() {
           "Package remote access as a billable managed service",
         ]}
         ctaText="See how deployment works →"
-        ctaHref="#how-it-works"
+        ctaHref="/how-it-works#rollout"
         imageSrc="/images/revenue.png"
         imageAlt="Overlay customer portal revenue view"
         className="bg-[#FAF5FF]"
@@ -95,7 +95,7 @@ export default function MonetiseRemoteAccessPage() {
         primaryCtaLabel="Book a Demo"
         primaryCtaHref="#"
         secondaryCtaLabel="▶ Watch 2-min Overview"
-        secondaryCtaHref="#how-it-works"
+        secondaryCtaHref="/how-it-works"
         footnote="Launch in days, not months."
         variant="testimonial"
       />

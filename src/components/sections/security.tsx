@@ -1,9 +1,16 @@
 "use client";
 
+import type { LucideIcon } from "lucide-react";
 import { Shield, LayoutGrid, Box, FileText, Cpu, Settings } from "lucide-react";
 import { motion } from "framer-motion";
 
-const securityCards = [
+type TrustCard = {
+    icon: LucideIcon;
+    title: string;
+    description: string;
+};
+
+const securityCards: TrustCard[] = [
     {
         icon: Shield,
         title: "Identity-based access",
@@ -36,21 +43,35 @@ const securityCards = [
     }
 ];
 
-export function SecuritySection() {
+type TrustPillarsSectionProps = {
+    eyebrow: string;
+    title: React.ReactNode;
+    description: string;
+    cards: TrustCard[];
+    className?: string;
+};
+
+export function TrustPillarsSection({
+    eyebrow,
+    title,
+    description,
+    cards,
+    className = "bg-[#F3F1FF] py-24 px-6 relative overflow-hidden",
+}: TrustPillarsSectionProps) {
     return (
-        <section className="bg-[#F3F1FF] py-24 px-6 relative overflow-hidden">
+        <section className={className}>
             <div className="max-w-[1160px] mx-auto text-center mb-16 px-4">
-                <p className="font-mono text-xs font-medium tracking-[0.14em] text-[#7C3AED] uppercase mb-4">Built for Multi-Vendor Environments</p>
+                <p className="font-mono text-xs font-medium tracking-[0.14em] text-[#7C3AED] uppercase mb-4">{eyebrow}</p>
                 <h2 className="font-display text-[28px] md:text-[48px] font-bold text-[#0F0520] leading-[1.1] tracking-tight mb-4">
-                    Zero-trust. Identity-driven.<br className="hidden md:block" /> Fully auditable.
+                    {title}
                 </h2>
                 <p className="text-lg text-[#6B7280] max-w-[580px] mx-auto leading-relaxed">
-                    Security that works by default, not by configuration. No shared credentials. No open ports. Every session logged and attributable.
+                    {description}
                 </p>
             </div>
 
             <div className="max-w-[1160px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {securityCards.map((card, idx) => (
+                {cards.map((card, idx) => (
                     <motion.div
                         key={idx}
                         initial={{ opacity: 0, y: 20 }}
@@ -68,5 +89,16 @@ export function SecuritySection() {
                 ))}
             </div>
         </section>
+    );
+}
+
+export function SecuritySection() {
+    return (
+        <TrustPillarsSection
+            eyebrow="Built for Multi-Vendor Environments"
+            title={<>Zero-trust. Identity-driven.<br className="hidden md:block" /> Fully auditable.</>}
+            description="Security that works by default, not by configuration. No shared credentials. No open ports. Every session logged and attributable."
+            cards={securityCards}
+        />
     );
 }
