@@ -13,67 +13,69 @@ const transition: Transition = { duration: 0.5, ease: "easeOut" };
 
 export function Hero() {
     return (
-        <section className="relative pt-32 pb-20 px-6 overflow-hidden flex flex-col items-center text-center bg-[#FAF5FF]">
+        <section className="relative overflow-hidden bg-[#FAF5FF] px-6 pb-20 pt-24 md:pt-28">
             <HeroAnimation />
 
-            {/* Gradient Overlay */}
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(124,58,237,0.16)_0%,_rgba(250,245,255,0)_45%)] pointer-events-none z-1" />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(250,245,255,0.95)_0%,_rgba(250,245,255,0)_75%)] pointer-events-none z-1" />
 
-            <div className="relative z-10 w-full max-w-[1160px] flex flex-col items-center">
-                <img src={"/images/logo_3.png"} className="h-24" />
-                <motion.div
-                    {...fadeInUp}
-                    transition={transition}
-                    className="font-mono mt-2 text-xs font-medium tracking-[0.14em] text-[#7C3AED] uppercase mb-[18px]"
-                >
-                    Remote access for BMS teams
-                </motion.div>
+            <div className="relative z-10 mx-auto grid max-w-[1160px] gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+                <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
+                    <img src={"/images/logo_3.png"} className="h-24" />
+                    <motion.div
+                        {...fadeInUp}
+                        transition={transition}
+                        className="font-mono mt-2 text-xs font-medium tracking-[0.14em] text-[#7C3AED] uppercase mb-[18px]"
+                    >
+                        Remote access for BMS teams
+                    </motion.div>
 
-                <motion.h1
-                    {...fadeInUp}
-                    transition={{ delay: 0.1, ...transition }}
-                    className="font-display text-[40px] md:text-[72px] font-extrabold text-[#111827] leading-[1.07] tracking-[-1.5px] max-w-[760px] mb-[22px]"
-                >
-                    Every Site.<br />One Login.
-                </motion.h1>
+                    <motion.h1
+                        {...fadeInUp}
+                        transition={{ delay: 0.1, ...transition }}
+                        className="font-display text-[40px] md:text-[72px] font-extrabold text-[#111827] leading-[1.07] tracking-[-1.5px] max-w-[760px] mb-[22px]"
+                    >
+                        Every Site.<br />One Login.
+                    </motion.h1>
 
-                <motion.p
-                    {...fadeInUp}
-                    transition={{ delay: 0.2, ...transition }}
-                    className="text-base md:text-[19px] text-[#6B7280] max-w-[520px] mb-9 leading-relaxed"
-                >
-                    Say goodbye to juggling VPNs and login credentials. Overlay gives you centralised
-                    remote access to your BMS without a system overhaul.
-                </motion.p>
+                    <motion.p
+                        {...fadeInUp}
+                        transition={{ delay: 0.2, ...transition }}
+                        className="text-base md:text-[19px] text-[#6B7280] max-w-[520px] mb-9 leading-relaxed"
+                    >
+                        Say goodbye to juggling VPNs and login credentials. Overlay gives you centralised
+                        remote access to your BMS without a system overhaul.
+                    </motion.p>
 
-                <HeroCTAGroup
-                    primaryLabel="Book a Demo"
-                    primaryHref="/book-a-demo"
-                    secondaryLabel="▶ How it Works"
-                    secondaryHref="/#demo-video"
-                    className="mb-3.5 justify-center"
-                />
+                    <HeroCTAGroup
+                        primaryLabel="Book a Demo"
+                        primaryHref="/book-a-demo"
+                        secondaryLabel="▶ How it Works"
+                        secondaryHref="/#demo-video"
+                        className="mb-3.5 justify-center lg:justify-start"
+                    />
 
-                <motion.div
-                    {...fadeInUp}
-                    transition={{ delay: 0.4, ...transition }}
-                    className="font-mono text-xs text-[#6B7280] mb-14"
-                >
-                    30 MIN · NO COMMITMENT
-                </motion.div>
+                    <motion.div
+                        {...fadeInUp}
+                        transition={{ delay: 0.4, ...transition }}
+                        className="font-mono text-xs text-[#6B7280] mb-14"
+                    >
+                        30 MIN · NO COMMITMENT
+                    </motion.div>
 
-                <motion.p
-                    {...fadeInUp}
-                    transition={{ delay: 0.5, ...transition }}
-                    className="font-mono text-[13px] text-[#6B7280] -mt-10"
-                >
-                    Onboarding in hours. No site visits required.
-                </motion.p>
+                    <motion.p
+                        {...fadeInUp}
+                        transition={{ delay: 0.5, ...transition }}
+                        className="font-mono text-[13px] text-[#6B7280] -mt-10"
+                    >
+                        Onboarding in hours. No site visits required.
+                    </motion.p>
+                </div>
 
                 <motion.div
                     {...fadeInUp}
                     transition={{ delay: 0.6, ...transition }}
-                    className="mt-10 w-full max-w-[640px] relative shadow-2xl"
+                    className="mt-4 w-full max-w-[640px] justify-self-center lg:mt-0 lg:max-w-none relative shadow-2xl"
                     id="demo-video"
                 >
                     <div className="bg-[#0F0520] rounded-t-lg h-7 flex items-center px-3.5 gap-1.5 border-b border-white/10">
