@@ -33,7 +33,7 @@ export default function Home() {
           "Logs you into head-ends automatically (Niagara 4 now supported)"
         ]}
         ctaText="See the dashboard in action →"
-        ctaHref="#"
+        ctaHref="#demo-video"
         imageSrc="/images/single-pane-of-glass.png"
         imageAlt="Unified access dashboard"
         className="bg-[#F3F1FF]"
