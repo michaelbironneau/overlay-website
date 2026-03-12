@@ -51,7 +51,7 @@ export function Hero() {
                         primaryLabel="Book a Demo"
                         primaryHref="/book-a-demo"
                         secondaryLabel="▶ How it Works"
-                        secondaryHref="/#demo-video"
+                        secondaryHref="https://share.descript.com/view/xZDVrT7GTzc"
                         className="mb-3.5 justify-center lg:justify-start"
                     />
 

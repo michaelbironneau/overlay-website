@@ -56,7 +56,7 @@ export function HeroCTAGroup({
 
             {secondaryHref ? (
                 <Button
-                    render={<Link href={secondaryHref} />}
+                    render={<Link target="new" href={secondaryHref} />}
                     nativeButton={false}
                     variant="outline"
                     size="lg"
