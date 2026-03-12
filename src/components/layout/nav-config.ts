@@ -26,7 +26,7 @@ export const productNavItems: NavChildItem[] = [
 export const primaryNavItems: NavItem[] = [
   {
     label: "Product",
-    children: productNavItems,
+    //children: productNavItems,
   },
   {
     href: "/how-it-works",

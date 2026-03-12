@@ -29,7 +29,7 @@ export function Footer() {
                             <ul className="flex flex-col gap-2.5">
                                 <li><Link href="#" className="text-sm hover:text-white transition-colors">Bureaus</Link></li>
                                 <li><Link href="/how-it-works" className="text-sm hover:text-white transition-colors">BMS Projects</Link></li>
-                                <li><Link href="/monetise-remote-access" className="text-sm hover:text-white transition-colors">Partners</Link></li>
+                                <li><Link href="/#new-revenue-streams" className="text-sm hover:text-white transition-colors">Partners</Link></li>
                             </ul>
                         </div>
 

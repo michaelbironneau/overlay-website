@@ -5,6 +5,7 @@ import { LogoStrip } from "@/components/sections/logo-strip";
 import { Comparison } from "@/components/sections/comparison";
 import { FeatureRow } from "@/components/sections/feature-row";
 import { EngineerProductivity } from "@/components/sections/engineer-productivity";
+import { RevenueCalculatorCard } from "@/components/sections/monetise-remote-access";
 import { SecuritySection } from "@/components/sections/security";
 import { TestimonialSection } from "@/components/sections/testimonial";
 import { CompatibilitySection } from "@/components/sections/compatibility";
@@ -40,6 +41,7 @@ export default function Home() {
       />
 
       <FeatureRow
+        id="new-revenue-streams"
         eyebrow="New Revenue Streams"
         title={<>Launch a customer portal<br />in minutes.</>}
         description="Give your clients secure, self-service access to their BMS dashboards. No development needed. Turn access into recurring revenue."
@@ -47,12 +49,12 @@ export default function Home() {
           "White-label portal with your branding, hosted on your domain",
           "Granular permissions — clients see only what you allow",
           "High-margin recurring revenue from digital services",
-          "Ready-made sales collateral to close faster"
+          "Ready-made sales collateral to close faster",
+          "Automated customer billing and renewals"
         ]}
-        ctaText="See how bureaus monetise access →"
-        ctaHref="/monetise-remote-access"
-        imageSrc="/images/revenue.png"
-        imageAlt="Customer portal"
+        ctaText="See how you can monetise access →"
+        ctaHref="/book-a-demo"
+        visual={<RevenueCalculatorCard />}
         reverse
         className="bg-white"
       />

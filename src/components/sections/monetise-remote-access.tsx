@@ -92,7 +92,7 @@ export function MonetiseRemoteAccessHero() {
   );
 }
 
-function RevenueCalculatorCard() {
+export function RevenueCalculatorCard() {
   const [siteCount, setSiteCount] = useState(25);
   const [estimatedMonthlyRevenue, setEstimatedMonthlyRevenue] = useState<number | null>(null);
   const [animatedEstimate, setAnimatedEstimate] = useState(0);
