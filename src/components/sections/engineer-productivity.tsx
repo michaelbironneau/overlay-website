@@ -15,7 +15,7 @@ export function EngineerProductivity() {
                         Reclaim 10–30% of<br className="hidden md:block" /> your bureau&apos;s day.
                     </h2>
                     <p className="text-lg text-white/70 max-w-[580px] mx-auto leading-relaxed">
-                        Every minute spent logging into disparate systems is a minute not spent solving problems.
+                        Every minute spent logging into systems is a minute you're not solving problems.
                     </p>
                 </div>
 
