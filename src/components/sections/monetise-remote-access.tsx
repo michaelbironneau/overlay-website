@@ -70,12 +70,8 @@ export function MonetiseRemoteAccessHero() {
             Monetise Remote Access
           </h1>
           <p className="mt-6 max-w-[640px] text-lg leading-relaxed text-[#4B5563] md:text-[20px]">
-            Secure remote access for BMS operators, without the admin. Overlay lets you provide
-            secure remote connections to your customers&apos; buildings while we handle the
+            Secure remote access for BMS operators, without the admin. You bring the sites, we handle the
             infrastructure, billing, and renewals.
-          </p>
-          <p className="mt-4 text-lg leading-relaxed text-[#4B5563]">
-            You focus on engineering. We handle the platform.
           </p>
           <p className="mt-6 text-[20px] font-semibold text-[#0F0520]">
             Start offering remote access as a service, in days, not months.
