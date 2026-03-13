@@ -22,7 +22,7 @@ export function TestimonialSection() {
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
-                    className="font-mono text-sm tracking-[0.2em] text-white/50 uppercase"
+                    className="hidden font-mono text-sm tracking-[0.2em] text-white/50 uppercase"
                 >
                     — JAMES WALKER, Operations Director, Allied Facilities Group
                 </motion.p>
