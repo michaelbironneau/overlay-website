@@ -24,7 +24,7 @@ const comparisonData: ComparisonRow[] = [
     },
     {
         before: { title: "Remote connectivity is a cost center", sub: "Paying for SIM cards and routers gets expensive at scale" },
-        after: { title: "Remote connectivity is a revenue stream", sub: "Overlay's whitelabel resources allow you to sell remote access back to customers" }
+        after: { title: "Remote connectivity is a revenue stream", sub: "Sell remote access back to customers with Overlay's whitelabel resources and automated billing & renewals" }
     }
 ];
 
