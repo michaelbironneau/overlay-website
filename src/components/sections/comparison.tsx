@@ -12,7 +12,7 @@ const comparisonData: ComparisonRow[] = [
     },
     {
         before: { title: "Truck roll for every remedial", sub: "£400+ average cost, 2–4 hour disruption per incident" },
-        after: { title: "Remote session in 90 seconds", sub: "Fix it from the office — margin stays where it belongs" }
+        after: { title: "Remote session in 10 seconds", sub: "Fix it from the office — margin stays where it belongs" }
     },
     {
         before: { title: "Head-ends exposed on the internet", sub: "Public IPs, no segmentation — audit failure by design" },
