@@ -10,6 +10,7 @@ const logos = [
     { src: "/images/tridium.png", alt: "Tridium / Niagara", width: 100, height: 24 },
     { src: "/images/siemens.svg", alt: "Siemens", width: 90, height: 22 },
     { src: "/images/schneider.png", alt: "Schneider Electric", width: 120, height: 36 },
+    { src: "/images/trend.png", alt: "Trend", width: 120, height: 36 }
 ];
 
 export function LogoStrip() {
