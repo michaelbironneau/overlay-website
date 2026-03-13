@@ -7,12 +7,12 @@ import { ComparisonGrid, type ComparisonRow } from "@/components/sections/compar
 
 const comparisonData: ComparisonRow[] = [
     {
-        before: { title: "Credentials shared over email", sub: "Plaintext passwords, no expiry, zero visibility into access" },
-        after: { title: "Zero-credential kiosk links", sub: "One-click access, time-limited, revocable instantly" }
+        before: { title: "A maze of systems to log into", sub: "VMs, jump boxes, different VPNs for each site" },
+        after: { title: "Log in once, access all your sites", sub: "One-click access based on Overlay identity" }
     },
     {
-        before: { title: "Truck roll for every remedial", sub: "£400+ average cost, 2–4 hour disruption per incident" },
-        after: { title: "Remote session in 10 seconds", sub: "Fix it from the office — margin stays where it belongs" }
+        before: { title: "Site visits for every problem", sub: "High cost, high disruption for every incident" },
+        after: { title: "Connect engineering tools in seconds", sub: "Use Workbench and other tools remotely, preserving margins" }
     },
     {
         before: { title: "Head-ends exposed on the internet", sub: "Public IPs, no segmentation — audit failure by design" },
@@ -20,7 +20,11 @@ const comparisonData: ComparisonRow[] = [
     },
     {
         before: { title: "\"Who changed that setpoint?\"", sub: "Shared credentials — no answer, no defence, no audit" },
-        after: { title: "Full audit trail — every action logged", sub: "Who, what, when — compliant by default, defensible by design" }
+        after: { title: "Full audit and access trail", sub: "Who, what, when — compliant by default, defensible by design" }
+    },
+    {
+        before: { title: "Remote connectivity is a cost center", sub: "Paying for SIM cards and routers gets expensive at scale" },
+        after: { title: "Remote connectivity is a revenue stream", sub: "Overlay's whitelabel resources allow you to sell remote access back to customers" }
     }
 ];
 
