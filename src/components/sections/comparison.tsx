@@ -11,7 +11,7 @@ const comparisonData: ComparisonRow[] = [
         after: { title: "Zero-credential kiosk links", sub: "One-click access, time-limited, revocable instantly" }
     },
     {
-        before: { title: "Truck roll for every remedial", sub: "$400+ average cost, 2–4 hour disruption per incident" },
+        before: { title: "Truck roll for every remedial", sub: "£400+ average cost, 2–4 hour disruption per incident" },
         after: { title: "Remote session in 90 seconds", sub: "Fix it from the office — margin stays where it belongs" }
     },
     {
